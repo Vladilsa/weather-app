@@ -14,7 +14,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=zaporizhzhya&appid=008b
 
  });
  
- fetch('http://api.openweathermap.org/data/2.5/forecast?q=zaporizhzhya,KE,&appid=008b2889f1333019e31912feeaad9b87&units=metric')
+ fetch('https://api.openweathermap.org/data/2.5/forecast?q=zaporizhzhya,KE,&appid=008b2889f1333019e31912feeaad9b87&units=metric')
  .then(function (resp) {return resp.json()})
  .then(function(data){
      console.log(data);
