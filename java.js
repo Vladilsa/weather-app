@@ -2,7 +2,6 @@
 fetch('https://api.openweathermap.org/data/2.5/weather?q=zaporizhzhya&appid=008b2889f1333019e31912feeaad9b87')
  .then(function (resp) {return resp.json()})
  .then(function(data){
-     console.log(data);
      document.querySelector('.location').innerHTML=data.name;
      document.querySelector('.numb').textContent= Math.round( data.main.temp - 273);
      document.querySelector('.weather').textContent=data.weather[0]['description'];
@@ -17,7 +16,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=zaporizhzhya&appid=008b
  fetch('https://api.openweathermap.org/data/2.5/forecast?q=zaporizhzhya,KE,&appid=008b2889f1333019e31912feeaad9b87&units=metric')
  .then(function (resp) {return resp.json()})
  .then(function(data){
-     console.log(data);
      document.querySelector('.temp-hours-1').innerHTML=Math.round(data.list[0].main.temp);
      document.querySelector('.temp-hours-2').innerHTML=Math.round(data.list[1].main.temp);
      document.querySelector('.temp-hours-3').innerHTML=Math.round(data.list[2].main.temp);
