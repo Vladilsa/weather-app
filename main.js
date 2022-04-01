@@ -1,4 +1,3 @@
-
 fetch('https://api.openweathermap.org/data/2.5/weather?q=zaporizhzhya&appid=008b2889f1333019e31912feeaad9b87')
  .then(function (resp) {return resp.json()})
  .then(function(data){
@@ -6,13 +5,8 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=zaporizhzhya&appid=008b
      document.querySelector('.numb').textContent= Math.round( data.main.temp - 273);
      document.querySelector('.weather').textContent=data.weather[0]['description'];
      document.querySelector('.numb-2').textContent=Math.round(data.main.feels_like -273);
-     document.querySelector('.humidity-data').textContent=data.main.humidity + "%";
-     
+     document.querySelector('.humidity-data').textContent=data.main.humidity + "%";    
   })
- .catch(function(){
-
- });
- 
  fetch('https://api.openweathermap.org/data/2.5/forecast?q=zaporizhzhya,KE,&appid=008b2889f1333019e31912feeaad9b87&units=metric')
  .then(function (resp) {return resp.json()})
  .then(function(data){
@@ -30,9 +24,5 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=zaporizhzhya&appid=008b
      document.querySelector('.thu').innerHTML=Math.round(data.list[14].main.temp);
      document.querySelector('.fri').innerHTML=Math.round(data.list[17].main.temp);
      document.querySelector('.sat').innerHTML=Math.round(data.list[25].main.temp);
-     document.querySelector('.sun').innerHTML=Math.round(data.list[33].main.temp);
-     
+     document.querySelector('.sun').innerHTML=Math.round(data.list[33].main.temp); 
  })
- .catch(function(){
-
- });
